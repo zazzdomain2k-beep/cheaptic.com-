@@ -4,6 +4,7 @@ import Hero from './Hero';
 import TravelDeals from './TravelDeals';
 import PopularDestinations from './PopularDestinations';
 import GeminiTravelTips from './GeminiTravelTips';
+import CalendarWidget from './CalendarWidget';
 import AboutUs from './AboutUs';
 import Contact from './Contact';
 import BlogPreview from './BlogPreview';
@@ -29,6 +30,7 @@ const HomePage: React.FC<HomePageProps> = ({ pageRefs, onViewArticle }) => {
       <div ref={pageRefs['AI Tips']}>
         <GeminiTravelTips />
       </div>
+      <CalendarWidget />
       <div ref={pageRefs.Blog}>
           <BlogPreview onViewArticle={onViewArticle} />
       </div>

@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ onNavClick }) => {
             <PlaneIcon className="h-8 w-8 text-blue-600" />
             <span className="ml-2 text-2xl font-extrabold text-slate-800 tracking-tight">cheaptic.com</span>
           </div>
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navLinks.map(link => (
               <button
                 key={link}
@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ onNavClick }) => {
               </button>
             ))}
           </nav>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-slate-800 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ onNavClick }) => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-slate-200">
+        <div className="lg:hidden bg-white border-t border-slate-200">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map(link => (
               <button

@@ -1,10 +1,10 @@
-
 import React from 'react';
-import { Article } from '../types';
+import { Article, Page } from '../types';
 import { MOCK_ARTICLES } from '../constants';
 
 interface BlogPreviewProps {
     onViewArticle: (article: Article) => void;
+    onNavClick: (page: Page) => void;
 }
 
 const ArticleCard: React.FC<{article: Article, onViewArticle: (article: Article) => void}> = ({ article, onViewArticle }) => {
@@ -19,7 +19,6 @@ const ArticleCard: React.FC<{article: Article, onViewArticle: (article: Article)
         <h3 className="text-xl font-bold text-slate-800 mb-2 leading-tight group-hover:text-blue-600 transition-colors duration-300">{article.title}</h3>
         <p className="text-slate-600 text-sm mb-4">{article.excerpt}</p>
         <button 
-            onClick={() => onViewArticle(article)}
             className="font-semibold text-blue-600 group-hover:text-blue-800 transition-colors duration-300"
         >
           Read More &rarr;
@@ -29,7 +28,7 @@ const ArticleCard: React.FC<{article: Article, onViewArticle: (article: Article)
   );
 };
 
-const BlogPreview: React.FC<BlogPreviewProps> = ({ onViewArticle }) => {
+const BlogPreview: React.FC<BlogPreviewProps> = ({ onViewArticle, onNavClick }) => {
   const previewArticles = MOCK_ARTICLES.slice(0, 3);
 
   return (
@@ -47,6 +46,14 @@ const BlogPreview: React.FC<BlogPreviewProps> = ({ onViewArticle }) => {
           {previewArticles.map(article => (
             <ArticleCard key={article.id} article={article} onViewArticle={onViewArticle} />
           ))}
+        </div>
+        <div className="mt-12 text-center">
+            <button
+                onClick={() => onNavClick('Blog')}
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+            >
+                View All Articles
+            </button>
         </div>
       </div>
     </section>

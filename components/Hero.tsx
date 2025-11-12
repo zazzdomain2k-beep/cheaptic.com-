@@ -1,3 +1,4 @@
+
 import React from 'react';
 import FlightSearchWidget from './FlightSearchWidget';
 
@@ -5,7 +6,7 @@ const Hero: React.FC = () => {
   return (
     <section 
       className="relative bg-cover bg-center text-white py-24 md:py-32 lg:py-40" 
-      style={{ backgroundImage: "url('https://picsum.photos/1920/1080?random=1&blur=2')" }}
+      style={{ backgroundImage: "url('https://images.pexels.com/photos/3734026/pexels-photo-3734026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')" }}
     >
       <div className="absolute inset-0 bg-black/50"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Hero from './Hero';
 import TravelDeals from './TravelDeals';
@@ -33,7 +32,7 @@ const HomePage: React.FC<HomePageProps> = ({ pageRefs, onViewArticle, onNavClick
       </div>
       <CalendarWidget />
       <div ref={pageRefs.Blog}>
-          <BlogPreview onViewArticle={onViewArticle} />
+          <BlogPreview onViewArticle={onViewArticle} onNavClick={onNavClick} />
       </div>
       <div ref={pageRefs['About Us']}>
         <AboutUs />

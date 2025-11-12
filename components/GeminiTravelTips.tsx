@@ -1,5 +1,5 @@
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { generateTravelTip } from '../services/geminiService';
 import { SparklesIcon } from '../constants';
 
@@ -10,6 +10,38 @@ const GeminiTravelTips: React.FC = () => {
   const [error, setError] = useState<string>('');
 
   const quickTopics = ['finding cheap food', 'budget accommodation', 'free city activities', 'saving on flights'];
+
+  const parseMarkdownToHTML = (text: string): string => {
+    const lines = text.split('\n');
+    let html = '';
+    let inList = false;
+
+    for (const line of lines) {
+      let processedLine = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+      if (processedLine.trim().startsWith('* ') || processedLine.trim().startsWith('- ')) {
+        if (!inList) {
+          html += '<ul>';
+          inList = true;
+        }
+        html += `<li>${processedLine.substring(processedLine.indexOf(' ') + 1)}</li>`;
+      } else {
+        if (inList) {
+          html += '</ul>';
+          inList = false;
+        }
+        if (processedLine.trim()) {
+          html += `<p>${processedLine}</p>`;
+        }
+      }
+    }
+
+    if (inList) {
+      html += '</ul>';
+    }
+
+    return html;
+  };
 
   const handleGenerateTip = useCallback(async (currentTopic: string) => {
     if (!currentTopic.trim()) {
@@ -29,6 +61,11 @@ const GeminiTravelTips: React.FC = () => {
       setIsLoading(false);
     }
   }, []);
+  
+  useEffect(() => {
+    handleGenerateTip('packing light');
+  }, [handleGenerateTip]);
+
 
   const handleSubmit = (e: React.FormEvent) => {
       e.preventDefault();
@@ -75,16 +112,16 @@ const GeminiTravelTips: React.FC = () => {
 
           {error && <p className="text-red-500 text-center">{error}</p>}
           
-          <div className="mt-6 min-h-[100px] bg-slate-50 p-6 rounded-lg prose prose-sm max-w-none prose-p:text-slate-600 prose-headings:text-slate-800">
+          <div className="mt-6 min-h-[100px] bg-slate-50 p-6 rounded-lg prose prose-sm max-w-none prose-p:text-slate-600 prose-headings:text-slate-800 prose-ul:list-disc prose-ul:pl-5">
             {isLoading && (
               <div className="flex justify-center items-center">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
               </div>
             )}
             {tip && !isLoading && (
-              <div dangerouslySetInnerHTML={{ __html: tip.replace(/\n/g, '<br />') }} />
+              <div dangerouslySetInnerHTML={{ __html: parseMarkdownToHTML(tip) }} />
             )}
-            {!tip && !isLoading && <p className="text-slate-400 text-center">Your travel tip will appear here...</p>}
+            {!tip && !isLoading && !error && <p className="text-slate-400 text-center">Your travel tip will appear here...</p>}
           </div>
         </div>
       </div>

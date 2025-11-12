@@ -3,24 +3,24 @@ import React from 'react';
 import { TravelDeal, Destination, Article } from './types';
 
 export const MOCK_TRAVEL_DEALS: TravelDeal[] = [
-  { id: 1, from: 'New York', to: 'Paris', price: 450, departureDate: '2024-10-15', imageUrl: 'https://picsum.photos/400/300?random=10' },
-  { id: 2, from: 'Los Angeles', to: 'Tokyo', price: 620, departureDate: '2024-11-02', imageUrl: 'https://picsum.photos/400/300?random=11' },
-  { id: 3, from: 'Chicago', to: 'Rome', price: 510, departureDate: '2024-09-28', imageUrl: 'https://picsum.photos/400/300?random=12' },
-  { id: 4, from: 'Miami', to: 'Cancun', price: 280, departureDate: '2024-10-05', imageUrl: 'https://picsum.photos/400/300?random=13' },
-  { id: 5, from: 'San Francisco', to: 'London', price: 550, departureDate: '2024-11-12', imageUrl: 'https://picsum.photos/400/300?random=14' },
-  { id: 6, from: 'Boston', to: 'Dublin', price: 420, departureDate: '2024-10-20', imageUrl: 'https://picsum.photos/400/300?random=15' },
-  { id: 7, from: 'Denver', to: 'Reykjavik', price: 490, departureDate: '2024-09-25', imageUrl: 'https://picsum.photos/400/300?random=16' },
-  { id: 8, from: 'Seattle', to: 'Vancouver', price: 150, departureDate: '2024-10-18', imageUrl: 'https://picsum.photos/400/300?random=17' },
-  { id: 9, from: 'Atlanta', to: 'Amsterdam', price: 580, departureDate: '2024-11-22', imageUrl: 'https://picsum.photos/400/300?random=18' },
-  { id: 10, from: 'Dallas', to: 'Barcelona', price: 610, departureDate: '2024-10-30', imageUrl: 'https://picsum.photos/400/300?random=19' },
-  { id: 11, from: 'Las Vegas', to: 'Honolulu', price: 350, departureDate: '2024-12-01', imageUrl: 'https://picsum.photos/400/300?random=23' },
-  { id: 12, from: 'Orlando', to: 'San Juan', price: 230, departureDate: '2024-11-08', imageUrl: 'https://picsum.photos/400/300?random=24' },
+  { id: 1, from: 'New York', to: 'Paris', price: 450, departureDate: '2024-10-15', imageUrl: 'https://images.pexels.com/photos/161901/paris-eiffel-tower-france-landmark-161901.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  { id: 2, from: 'Los Angeles', to: 'Tokyo', price: 620, departureDate: '2024-11-02', imageUrl: 'https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  { id: 3, from: 'Chicago', to: 'Rome', price: 510, departureDate: '2024-09-28', imageUrl: 'https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  { id: 4, from: 'Miami', to: 'Cancun', price: 280, departureDate: '2024-10-05', imageUrl: 'https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  { id: 5, from: 'San Francisco', to: 'London', price: 550, departureDate: '2024-11-12', imageUrl: 'https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  { id: 6, from: 'Boston', to: 'Dublin', price: 420, departureDate: '2024-10-20', imageUrl: 'https://images.pexels.com/photos/656195/pexels-photo-656195.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  { id: 7, from: 'Denver', to: 'Reykjavik', price: 490, departureDate: '2024-09-25', imageUrl: 'https://images.pexels.com/photos/1632242/pexels-photo-1632242.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  { id: 8, from: 'Seattle', to: 'Vancouver', price: 150, departureDate: '2024-10-18', imageUrl: 'https://images.pexels.com/photos/1239994/pexels-photo-1239994.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  { id: 9, from: 'Atlanta', to: 'Amsterdam', price: 580, departureDate: '2024-11-22', imageUrl: 'https://images.pexels.com/photos/1842332/pexels-photo-1842332.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  { id: 10, from: 'Dallas', to: 'Barcelona', price: 610, departureDate: '2024-10-30', imageUrl: 'https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  { id: 11, from: 'Las Vegas', to: 'Honolulu', price: 350, departureDate: '2024-12-01', imageUrl: 'https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  { id: 12, from: 'Orlando', to: 'San Juan', price: 230, departureDate: '2024-11-08', imageUrl: 'https://images.pexels.com/photos/2180447/pexels-photo-2180447.jpeg?auto=compress&cs=tinysrgb&w=400' },
 ];
 
 export const MOCK_DESTINATIONS: Destination[] = [
-  { id: 1, name: 'Santorini', country: 'Greece', imageUrl: 'https://picsum.photos/600/800?random=20', description: 'Famous for its stunning sunsets, white-washed villages, and blue-domed churches.' },
-  { id: 2, name: 'Kyoto', country: 'Japan', imageUrl: 'https://picsum.photos/600/800?random=21', description: 'Known for its classical Buddhist temples, as well as gardens, imperial palaces, and traditional wooden houses.' },
-  { id: 3, name: 'Bali', country: 'Indonesia', imageUrl: 'https://picsum.photos/600/800?random=22', description: 'An island paradise offering lush rice paddies, volcanic mountains, coral reefs and beautiful beaches.' },
+  { id: 1, name: 'Santorini', country: 'Greece', imageUrl: 'https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&dpr=1', description: 'Famous for its stunning sunsets, white-washed villages, and blue-domed churches.' },
+  { id: 2, name: 'Kyoto', country: 'Japan', imageUrl: 'https://images.pexels.com/photos/259251/pexels-photo-259251.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&dpr=1', description: 'Known for its classical Buddhist temples, as well as gardens, imperial palaces, and traditional wooden houses.' },
+  { id: 3, name: 'Bali', country: 'Indonesia', imageUrl: 'https://images.pexels.com/photos/373918/pexels-photo-373918.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&dpr=1', description: 'An island paradise offering lush rice paddies, volcanic mountains, coral reefs and beautiful beaches.' },
 ];
 
 export const MOCK_ARTICLES: Article[] = [
@@ -63,7 +63,7 @@ export const MOCK_ARTICLES: Article[] = [
       <h3>10. Valencia, Spain</h3>
       <p>Forget Madrid and Barcelona if you're on a tight budget. Valencia offers beautiful beaches, a stunning old town, and the futuristic City of Arts and Sciences. Plus, it's the birthplace of paella!</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=30`,
+    imageUrl: `https://images.pexels.com/photos/534151/pexels-photo-534151.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-28`
   },
   {
@@ -99,7 +99,7 @@ export const MOCK_ARTICLES: Article[] = [
       <h3>8. Plan to Do Laundry</h3>
       <p>The secret to long-term carry-on travel is doing laundry. You can use a hotel sink, a local laundromat, or a travel laundry service. Pack a small amount of laundry detergent sheets or a travel-sized bottle of soap.</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=31`,
+    imageUrl: `https://images.pexels.com/photos/190539/pexels-photo-190539.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-27`
   },
   {
@@ -136,7 +136,7 @@ export const MOCK_ARTICLES: Article[] = [
 
       <p>Finding a mistake fare takes a bit of luck and a lot of vigilance, but the payoff can be a once-in-a-lifetime trip for pennies on the dollar. Happy hunting!</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=32`,
+    imageUrl: `https://images.pexels.com/photos/210574/pexels-photo-210574.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-26`
   },
   {
@@ -171,7 +171,7 @@ export const MOCK_ARTICLES: Article[] = [
       <h3>Embrace the Freedom</h3>
       <p>The best part of solo travel is the absolute freedom. Want to spend a whole day in a museum? Do it. Want to change your plans on a whim? You can. Enjoy the journey of self-discovery and have the adventure of a lifetime!</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=33`,
+    imageUrl: `https://images.pexels.com/photos/3771836/pexels-photo-3771836.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-25`
   },
   {
@@ -202,7 +202,7 @@ export const MOCK_ARTICLES: Article[] = [
       <h3>Final Tip</h3>
       <p>The best card for you depends on your spending habits and travel goals. The biggest value often comes from the sign-up bonus, so try to apply for a new card when you know you can meet the minimum spending requirement to earn the bonus.</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=34`,
+    imageUrl: `https://images.pexels.com/photos/4386433/pexels-photo-4386433.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-24`
   },
   {
@@ -232,7 +232,7 @@ export const MOCK_ARTICLES: Article[] = [
       <h3>6. Take a Cooking Class</h3>
       <p>This is an investment that pays off. Not only do you get to eat a delicious, authentic meal, but you also learn the skills to recreate it back home. It's a cultural experience and a meal all in one.</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=35`,
+    imageUrl: `https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-23`
   },
   {
@@ -274,7 +274,7 @@ export const MOCK_ARTICLES: Article[] = [
         <li><strong>Grassroots Volunteering:</strong> A database of local organizations and social enterprises that you can contact directly, cutting out the middleman and ensuring your money goes straight to the cause.</li>
       </ul><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=36`,
+    imageUrl: `https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-22`
   },
   {
@@ -310,7 +310,7 @@ export const MOCK_ARTICLES: Article[] = [
         <li><strong>Travel Insurance:</strong> This is not optional. Get comprehensive travel insurance that covers medical emergencies, trip cancellations, and theft of your electronics. Companies like SafetyWing and World Nomads are designed for digital nomads.</li>
       </ul><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=37`,
+    imageUrl: `https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-21`
   },
   {
@@ -348,7 +348,7 @@ export const MOCK_ARTICLES: Article[] = [
       
       <p>Follow these simple rules, and you'll not only be a great roommate but also get the most out of the amazing social experience that hostels offer.</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=38`,
+    imageUrl: `https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-20`
   },
   {
@@ -388,7 +388,7 @@ export const MOCK_ARTICLES: Article[] = [
       <h3>7. Pack Your Own Entertainment and Snacks</h3>
       <p>Don't rely on the airline's in-flight entertainment system, which can be limited or broken. Load up your phone or tablet with movies, podcasts, and books. And while airline food has improved, having your own favorite snacks can be a huge comfort.</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=39`,
+    imageUrl: `https://images.pexels.com/photos/4674347/pexels-photo-4674347.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-19`
   },
   {
@@ -424,7 +424,7 @@ export const MOCK_ARTICLES: Article[] = [
       <h3>Things to Consider</h3>
       <p>Off-season travel isn't without its potential downsides. The weather might not be perfect, some attractions may have shorter hours, and certain seasonal activities (like ski resorts in summer) might be closed. But for many destinations, the pros far outweigh the cons. A little rain in Paris in November is a small price to pay for an empty Louvre and a cheap flight.</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=40`,
+    imageUrl: `https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-18`
   },
   {
@@ -469,7 +469,7 @@ export const MOCK_ARTICLES: Article[] = [
         <li><strong>Look for cleanliness:</strong> Check if the vendor maintains a clean cooking space and handles money and food separately.</li>
       </ul><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=41`,
+    imageUrl: `https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-17`
   },
   {
@@ -504,7 +504,7 @@ export const MOCK_ARTICLES: Article[] = [
       <h3>6. Have a Backup Plan</h3>
       <p>Sometimes, things go wrong. A train might be delayed, or a bus might not show up. Don't panic. Have your destination's address saved offline in your map app, and be prepared to walk or, if absolutely necessary, take a taxi. The money you've saved on all your other journeys will make this small splurge feel less painful.</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=42`,
+    imageUrl: `https://images.pexels.com/photos/592077/pexels-photo-592077.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-16`
   },
   {
@@ -536,7 +536,7 @@ export const MOCK_ARTICLES: Article[] = [
       
       <p>Travel hacking is a marathon, not a sprint. Start small, learn the basics, and you'll be on your way to seeing the world for a fraction of the cost.</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=43`,
+    imageUrl: `https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-15`
   },
   {
@@ -581,7 +581,7 @@ export const MOCK_ARTICLES: Article[] = [
       </ul>
       <p>By making these conscious choices, we can ensure that future generations of travelers and locals can continue to enjoy our planet's wonders.</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=44`,
+    imageUrl: `https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-14`
   },
   {
@@ -613,7 +613,7 @@ export const MOCK_ARTICLES: Article[] = [
         <li><strong>Visit on Fee-Free Days:</strong> The National Park Service offers several fee-free days throughout the year, such as on Martin Luther King Jr. Day and Veterans Day.</li>
       </ul><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h<h4>Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=45`,
+    imageUrl: `https://images.pexels.com/photos/371589/pexels-photo-371589.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-13`
   },
   {
@@ -660,7 +660,7 @@ export const MOCK_ARTICLES: Article[] = [
       <p>Pay attention to how locals greet each other and interact. You'll pick up on the rhythm and common expressions of the language. When you're in a cafe or on a bus, listen to the conversations around you. It's a great way to immerse yourself and learn passively.</p>
       <p>Making an effort to speak the local language is a sign of a true traveler, not just a tourist. It enriches your journey and shows that you're there to connect, not just to consume.</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=46`,
+    imageUrl: `https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-12`
   },
   {
@@ -694,7 +694,7 @@ export const MOCK_ARTICLES: Article[] = [
       <p>As we've mentioned before, traveling when others aren't is a great way to have a more authentic experience. The entire destination feels more like a hidden gem when you're not sharing it with thousands of other people.</p>
       <p>The greatest adventures often begin where the map ends. Don't be afraid to deviate from the plan and let your curiosity be your guide.</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=47`,
+    imageUrl: `https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-11`
   },
   {
@@ -739,7 +739,7 @@ export const MOCK_ARTICLES: Article[] = [
       </ul>
       <p>House sitting requires responsibility and commitment, but the reward is a unique and incredibly affordable way to see the world.</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=48`,
+    imageUrl: `https://images.pexels.com/photos/4588065/pexels-photo-4588065.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-10`
   },
   {
@@ -774,7 +774,7 @@ export const MOCK_ARTICLES: Article[] = [
       <h3>General Rule of Thumb:</h3>
       <p>If something feels too good to be true, it probably is. Trust your intuition. A healthy dose of skepticism is a traveler's best defense against scams.</p><div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f5ff; border-left: 4px solid #3b82f6; border-radius: 8px;"> <h4 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #1e3a8a;">Ready to Explore?</h4> <p style="margin-bottom: 1rem; color: #1e40af;">Your next adventure is just a click away! Use our powerful search to find the best flight deals and turn your travel dreams into reality.</p> <a href="/?page=Home" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Find Flights Now</a></div>
     `,
-    imageUrl: `https://picsum.photos/800/600?random=49`,
+    imageUrl: `https://images.pexels.com/photos/3768894/pexels-photo-3768894.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1`,
     publishDate: `2024-08-09`
   }
 ];

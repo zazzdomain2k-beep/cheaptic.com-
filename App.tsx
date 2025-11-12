@@ -5,17 +5,17 @@ import BlogPage from './components/BlogPage';
 import ArticlePage from './components/ArticlePage';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import TermsOfServicePage from './components/TermsOfServicePage';
+import TravelDealsPage from './components/TravelDealsPage';
 import Footer from './components/Footer';
 import { Page, Article } from './types';
 import { MOCK_ARTICLES } from './constants';
 
 const App: React.FC = () => {
-  const [view, setView] = useState<'Home' | 'Blog' | 'Article' | 'Privacy' | 'Terms'>('Home');
+  const [view, setView] = useState<'Home' | 'Blog' | 'Article' | 'Privacy' | 'Terms' | 'DealsPage'>('Home');
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
   
   const pageRefs = {
     Home: useRef<HTMLDivElement>(null),
-    'Travel Deals': useRef<HTMLDivElement>(null),
     Destinations: useRef<HTMLDivElement>(null),
     'AI Tips': useRef<HTMLDivElement>(null),
     Blog: useRef<HTMLDivElement>(null),
@@ -26,6 +26,10 @@ const App: React.FC = () => {
   const handleNavClick = useCallback((page: Page) => {
     if (page === 'Blog') {
       setView('Blog');
+      setSelectedArticle(null);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (page === 'Travel Deals') {
+      setView('DealsPage');
       setSelectedArticle(null);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (page === 'Privacy Policy') {
@@ -46,7 +50,6 @@ const App: React.FC = () => {
           case 'Home':
             window.scrollTo({ top: 0, behavior: 'smooth' });
             return;
-          case 'Travel Deals': ref = pageRefs['Travel Deals']; break;
           case 'Destinations': ref = pageRefs.Destinations; break;
           case 'AI Tips': ref = pageRefs['AI Tips']; break;
           case 'About Us': ref = pageRefs['About Us']; break;
@@ -79,13 +82,15 @@ const App: React.FC = () => {
         return selectedArticle ? <ArticlePage article={selectedArticle} onBack={handleBackToBlog} /> : <BlogPage articles={MOCK_ARTICLES} onViewArticle={handleViewArticle} />;
       case 'Blog':
         return <BlogPage articles={MOCK_ARTICLES} onViewArticle={handleViewArticle} />;
+      case 'DealsPage':
+        return <TravelDealsPage />;
       case 'Privacy':
         return <PrivacyPolicyPage />;
       case 'Terms':
         return <TermsOfServicePage />;
       case 'Home':
       default:
-        return <HomePage pageRefs={pageRefs} onViewArticle={handleViewArticle} />;
+        return <HomePage pageRefs={pageRefs} onViewArticle={handleViewArticle} onNavClick={handleNavClick} />;
     }
   };
 

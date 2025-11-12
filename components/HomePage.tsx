@@ -8,21 +8,22 @@ import CalendarWidget from './CalendarWidget';
 import AboutUs from './AboutUs';
 import Contact from './Contact';
 import BlogPreview from './BlogPreview';
-import { Article } from '../types';
+import { Article, Page } from '../types';
 
 interface HomePageProps {
   pageRefs: { [key: string]: React.RefObject<HTMLDivElement> };
   onViewArticle: (article: Article) => void;
+  onNavClick: (page: Page) => void;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ pageRefs, onViewArticle }) => {
+const HomePage: React.FC<HomePageProps> = ({ pageRefs, onViewArticle, onNavClick }) => {
   return (
     <>
       <div ref={pageRefs.Home}>
         <Hero />
       </div>
-      <div ref={pageRefs['Travel Deals']}>
-        <TravelDeals />
+      <div>
+        <TravelDeals onNavClick={onNavClick} />
       </div>
       <div ref={pageRefs.Destinations}>
         <PopularDestinations />

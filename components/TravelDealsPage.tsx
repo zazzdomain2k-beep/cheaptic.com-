@@ -1,11 +1,7 @@
 
 import React from 'react';
-import { TravelDeal, Page } from '../types';
 import { MOCK_TRAVEL_DEALS } from '../constants';
-
-interface TravelDealsProps {
-  onNavClick: (page: Page) => void;
-}
+import { TravelDeal } from '../types';
 
 const TravelDealCard: React.FC<{deal: TravelDeal}> = ({ deal }) => {
   return (
@@ -32,35 +28,27 @@ const TravelDealCard: React.FC<{deal: TravelDeal}> = ({ deal }) => {
   );
 };
 
-const TravelDeals: React.FC<TravelDealsProps> = ({ onNavClick }) => {
-  const previewDeals = MOCK_TRAVEL_DEALS.slice(0, 3);
+
+const TravelDealsPage: React.FC = () => {
   return (
-    <section className="py-16 sm:py-20 bg-slate-100">
+    <div className="bg-slate-50 py-16 sm:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Top Travel Deals
-          </h2>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+            Today's Top Travel Deals
+          </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-slate-600">
-            Handpicked offers to get you on your next adventure for less.
+            Explore our curated list of the best flight deals available right now. Book your next adventure for less!
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {previewDeals.map(deal => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {MOCK_TRAVEL_DEALS.map(deal => (
             <TravelDealCard key={deal.id} deal={deal} />
           ))}
         </div>
-        <div className="mt-12 text-center">
-            <button
-                onClick={() => onNavClick('Travel Deals')}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
-            >
-                View All Deals
-            </button>
-        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default TravelDeals;
+export default TravelDealsPage;

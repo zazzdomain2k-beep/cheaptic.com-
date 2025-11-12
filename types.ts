@@ -1,5 +1,4 @@
-
-export type Page = 'Home' | 'Travel Deals' | 'Destinations' | 'AI Tips' | 'Blog' | 'About Us' | 'Contact';
+export type Page = 'Home' | 'Travel Deals' | 'Destinations' | 'AI Tips' | 'Blog' | 'About Us' | 'Contact' | 'Privacy Policy' | 'Terms of Service';
 
 export interface TravelDeal {
   id: number;

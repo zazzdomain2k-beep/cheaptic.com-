@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Page } from '../types';
 import { PlaneIcon } from '../constants';
@@ -37,8 +36,8 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
                  <div>
                     <h4 className="font-semibold text-white tracking-wider uppercase mb-4">Legal</h4>
                     <ul className="space-y-2">
-                        <li><a href="#" className="hover:text-white transition-colors duration-300">Privacy Policy</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                        <li><button onClick={() => onNavClick('Privacy Policy')} className="hover:text-white transition-colors duration-300">Privacy Policy</button></li>
+                        <li><button onClick={() => onNavClick('Terms of Service')} className="hover:text-white transition-colors duration-300">Terms of Service</button></li>
                     </ul>
                  </div>
                  <div>

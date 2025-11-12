@@ -1,15 +1,16 @@
-
 import React, { useState, useCallback, useRef } from 'react';
 import Header from './components/Header';
 import HomePage from './components/HomePage';
 import BlogPage from './components/BlogPage';
 import ArticlePage from './components/ArticlePage';
+import PrivacyPolicyPage from './components/PrivacyPolicyPage';
+import TermsOfServicePage from './components/TermsOfServicePage';
 import Footer from './components/Footer';
 import { Page, Article } from './types';
 import { MOCK_ARTICLES } from './constants';
 
 const App: React.FC = () => {
-  const [view, setView] = useState<'Home' | 'Blog' | 'Article'>('Home');
+  const [view, setView] = useState<'Home' | 'Blog' | 'Article' | 'Privacy' | 'Terms'>('Home');
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
   
   const pageRefs = {
@@ -25,6 +26,14 @@ const App: React.FC = () => {
   const handleNavClick = useCallback((page: Page) => {
     if (page === 'Blog') {
       setView('Blog');
+      setSelectedArticle(null);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (page === 'Privacy Policy') {
+      setView('Privacy');
+      setSelectedArticle(null);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (page === 'Terms of Service') {
+      setView('Terms');
       setSelectedArticle(null);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
@@ -70,6 +79,10 @@ const App: React.FC = () => {
         return selectedArticle ? <ArticlePage article={selectedArticle} onBack={handleBackToBlog} /> : <BlogPage articles={MOCK_ARTICLES} onViewArticle={handleViewArticle} />;
       case 'Blog':
         return <BlogPage articles={MOCK_ARTICLES} onViewArticle={handleViewArticle} />;
+      case 'Privacy':
+        return <PrivacyPolicyPage />;
+      case 'Terms':
+        return <TermsOfServicePage />;
       case 'Home':
       default:
         return <HomePage pageRefs={pageRefs} onViewArticle={handleViewArticle} />;

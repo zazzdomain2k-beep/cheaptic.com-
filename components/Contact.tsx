@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Get In Touch
+              Contact Us
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-slate-600">
               Have questions or feedback? We'd love to hear from you.

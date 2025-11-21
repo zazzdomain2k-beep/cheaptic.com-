@@ -1,21 +1,9 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-const API_KEY = process.env.API_KEY;
-
-if (!API_KEY) {
-  // In a real app, you might want to handle this more gracefully.
-  // For this context, we assume the API key is always available.
-  console.warn("API_KEY environment variable not set.");
-}
-
-const ai = new GoogleGenAI({ apiKey: API_KEY! });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const generateTravelTip = async (topic: string): Promise<string> => {
-  if (!API_KEY) {
-    return "API Key is not configured. Please set the API_KEY environment variable.";
-  }
-
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-2.5-flash',
@@ -25,11 +13,10 @@ export const generateTravelTip = async (topic: string): Promise<string> => {
         temperature: 0.7,
         topP: 1,
         topK: 32,
-        maxOutputTokens: 256,
       }
     });
     
-    return response.text;
+    return response.text || "Sorry, I couldn't generate a tip at this time.";
   } catch (error) {
     console.error("Error generating travel tip:", error);
     return "Sorry, I couldn't generate a tip at the moment. Please try again later.";

@@ -6,12 +6,13 @@ import ArticlePage from './components/ArticlePage';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import TermsOfServicePage from './components/TermsOfServicePage';
 import TravelDealsPage from './components/TravelDealsPage';
+import AboutUs from './components/AboutUs';
 import Footer from './components/Footer';
 import { Page, Article } from './types';
 import { MOCK_ARTICLES } from './constants';
 
 const App: React.FC = () => {
-  const [view, setView] = useState<'Home' | 'Blog' | 'Article' | 'Privacy' | 'Terms' | 'DealsPage'>('Home');
+  const [view, setView] = useState<'Home' | 'Blog' | 'Article' | 'Privacy' | 'Terms' | 'DealsPage' | 'About'>('Home');
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
   
   const pageRefs = {
@@ -19,7 +20,6 @@ const App: React.FC = () => {
     Destinations: useRef<HTMLDivElement>(null),
     'AI Tips': useRef<HTMLDivElement>(null),
     Blog: useRef<HTMLDivElement>(null),
-    'About Us': useRef<HTMLDivElement>(null),
     Contact: useRef<HTMLDivElement>(null),
   };
 
@@ -40,6 +40,10 @@ const App: React.FC = () => {
       setView('Terms');
       setSelectedArticle(null);
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (page === 'About Us') {
+      setView('About');
+      setSelectedArticle(null);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       setView('Home');
       setSelectedArticle(null);
@@ -52,7 +56,6 @@ const App: React.FC = () => {
             return;
           case 'Destinations': ref = pageRefs.Destinations; break;
           case 'AI Tips': ref = pageRefs['AI Tips']; break;
-          case 'About Us': ref = pageRefs['About Us']; break;
           case 'Contact': ref = pageRefs.Contact; break;
           default: ref = pageRefs.Home;
         }
@@ -88,6 +91,8 @@ const App: React.FC = () => {
         return <PrivacyPolicyPage />;
       case 'Terms':
         return <TermsOfServicePage />;
+      case 'About':
+        return <AboutUs />;
       case 'Home':
       default:
         return <HomePage pageRefs={pageRefs} onViewArticle={handleViewArticle} onNavClick={handleNavClick} />;

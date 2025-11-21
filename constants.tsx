@@ -3,7 +3,7 @@ import React from 'react';
 import { TravelDeal, Destination, Article } from './types';
 
 export const MOCK_TRAVEL_DEALS: TravelDeal[] = [
-  { id: 1, from: 'New York', to: 'Paris', price: 450, departureDate: '2024-10-15', imageUrl: 'https://images.pexels.com/photos/161901/paris-eiffel-tower-france-landmark-161901.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  { id: 1, from: 'New York', to: 'Paris', price: 450, departureDate: '2024-10-15', imageUrl: 'https://images.pexels.com/photos/1850619/pexels-photo-1850619.jpeg?auto=compress&cs=tinysrgb&w=400' },
   { id: 2, from: 'Los Angeles', to: 'Tokyo', price: 620, departureDate: '2024-11-02', imageUrl: 'https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=400' },
   { id: 3, from: 'Chicago', to: 'Rome', price: 510, departureDate: '2024-09-28', imageUrl: 'https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg?auto=compress&cs=tinysrgb&w=400' },
   { id: 4, from: 'Miami', to: 'Cancun', price: 280, departureDate: '2024-10-05', imageUrl: 'https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&w=400' },
@@ -19,8 +19,8 @@ export const MOCK_TRAVEL_DEALS: TravelDeal[] = [
 
 export const MOCK_DESTINATIONS: Destination[] = [
   { id: 1, name: 'Santorini', country: 'Greece', imageUrl: 'https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&dpr=1', description: 'Famous for its stunning sunsets, white-washed villages, and blue-domed churches.' },
-  { id: 2, name: 'Kyoto', country: 'Japan', imageUrl: 'https://images.pexels.com/photos/259251/pexels-photo-259251.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&dpr=1', description: 'Known for its classical Buddhist temples, as well as gardens, imperial palaces, and traditional wooden houses.' },
-  { id: 3, name: 'Bali', country: 'Indonesia', imageUrl: 'https://images.pexels.com/photos/373918/pexels-photo-373918.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&dpr=1', description: 'An island paradise offering lush rice paddies, volcanic mountains, coral reefs and beautiful beaches.' },
+  { id: 2, name: 'Kyoto', country: 'Japan', imageUrl: 'https://images.pexels.com/photos/1822605/pexels-photo-1822605.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&dpr=1', description: 'Known for its classical Buddhist temples, as well as gardens, imperial palaces, and traditional wooden houses.' },
+  { id: 3, name: 'Bali', country: 'Indonesia', imageUrl: 'https://images.pexels.com/photos/2100018/pexels-photo-2100018.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&dpr=1', description: 'An island paradise offering lush rice paddies, volcanic mountains, coral reefs and beautiful beaches.' },
 ];
 
 export const MOCK_ARTICLES: Article[] = [
